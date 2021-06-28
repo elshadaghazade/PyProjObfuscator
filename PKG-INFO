@@ -1,48 +1,45 @@
 Metadata-Version: 2.1
 Name: PyProjObfuscator
-Version: 1.0.21
+Version: 1.0.0rc1
 Summary: Python Code Obfuscator
 Home-page: https://github.com/elshadaghazade/PyProjObfuscator
 Author: Elshad Aghazade
 Author-email: info@elshadaghazade.com
 License: MIT
 Project-URL: Bug Tracker, https://github.com/elshadaghazade/PyProjObfuscator/issues
+Description: # PYTHON PROJECT OBFUSCATOR
+        
+        This tool is for to obfuscate whole Python project codes of any type.
+        
+        ## INSTALLATION
+        Type pip command on your terminal:
+        
+        ```
+        $ pip install PyProjObfuscator
+        ```
+        
+        Or you can clone and install it manually from github: [PyProjObfuscator Github Page](https://github.com/elshadaghazade/PyProjObfuscator)
+        
+        ```
+        $ git clone https://github.com/elshadaghazade/PyProjObfuscator
+        $ python setup.py install
+        ```
+        
+        ## USAGE
+        After the installation ***obfuscate*** command will appear in your console. Using that command you can obfuscate any type of Python project.
+        
+        ```
+        $ obfuscate -p my-lovely-project -d destination-dir
+        ```
+        
+        ## PARAMETERS
+        - **--path** parameter is project path to obfuscate
+        - **--dist** destination folder for obfuscated files. By default is ***./dist***
+        - **--version** will show you version of the module
+        - **--help** will show you usage documentation of the module
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Development Status :: 3 - Alpha
 Description-Content-Type: text/markdown
-License-File: LICENSE.txt
-
-# PYTHON PROJECT OBFUSCATOR
-
-This tool is for to obfuscate whole Python project codes of any type.
-
-## INSTALLATION
-Type pip command on your terminal:
-
-```
-$ pip install PyProjObfuscator
-```
-
-Or you can clone and install it manually from github: [PyProjObfuscator Github Page](https://github.com/elshadaghazade/PyProjObfuscator)
-
-```
-$ git clone https://github.com/elshadaghazade/PyProjObfuscator
-$ python setup.py install
-```
-
-## USAGE
-After the installation ***obfuscate*** command will appear in your console. Using that command you can obfuscate any type of Python project.
-
-```
-$ obfuscate -p my-lovely-project -d destination-dir
-```
-
-## PARAMETERS
-- **--path** parameter is project path to obfuscate
-- **--dist** destination folder for obfuscated files. By default is ***./dist***
-- **--version** will show you version of the module
-- **--help** will show you usage documentation of the module
-
