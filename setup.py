@@ -5,7 +5,7 @@ from setuptools import setup, find_packages, Extension
 
 setup(
     name='PyProjObfuscator',
-    version="1.0.0-rc-1",
+    version="1.1.0",
     description="Python Code Obfuscator",
     ext_modules = [Extension('obfuscator', ['src/obfuscator.c'])],
     packages=find_packages(exclude=('.py3', 'dist', 'build', 'test', 'hello_world', 'src')),

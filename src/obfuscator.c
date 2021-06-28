@@ -5,7 +5,7 @@
     "distutils": {
         "name": "obfuscator",
         "sources": [
-            "src/obfuscator.py"
+            "/Users/user1/Documents/REPOS/python_obfuscator/src/obfuscator.py"
         ]
     },
     "module_name": "obfuscator"
@@ -23,7 +23,7 @@ END: Cython Metadata */
 #else
 #define CYTHON_ABI "0_29_23"
 #define CYTHON_HEX_VERSION 0x001D17F0
-#define CYTHON_FUTURE_DIVISION 0
+#define CYTHON_FUTURE_DIVISION 1
 #include <stddef.h>
 #ifndef offsetof
   #define offsetof(type, member) ( (size_t) & ((type*)0) -> member )
@@ -827,7 +827,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "src/obfuscator.py",
+  "obfuscator.py",
 };
 
 /*--- Type declarations ---*/
@@ -1084,23 +1084,8 @@ static PyObject *__Pyx__GetModuleGlobalName(PyObject *name, PY_UINT64_T *dict_ve
 static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name);
 #endif
 
-/* StringJoin.proto */
-#if PY_MAJOR_VERSION < 3
-#define __Pyx_PyString_Join __Pyx_PyBytes_Join
-#define __Pyx_PyBaseString_Join(s, v) (PyUnicode_CheckExact(s) ? PyUnicode_Join(s, v) : __Pyx_PyBytes_Join(s, v))
-#else
-#define __Pyx_PyString_Join PyUnicode_Join
-#define __Pyx_PyBaseString_Join PyUnicode_Join
-#endif
-#if CYTHON_COMPILING_IN_CPYTHON
-    #if PY_MAJOR_VERSION < 3
-    #define __Pyx_PyBytes_Join _PyString_Join
-    #else
-    #define __Pyx_PyBytes_Join _PyBytes_Join
-    #endif
-#else
-static CYTHON_INLINE PyObject* __Pyx_PyBytes_Join(PyObject* sep, PyObject* values);
-#endif
+/* PyObjectCall2Args.proto */
+static CYTHON_UNUSED PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2);
 
 /* PyObjectCallNoArg.proto */
 #if CYTHON_COMPILING_IN_CPYTHON
@@ -1108,9 +1093,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func);
 #else
 #define __Pyx_PyObject_CallNoArg(func) __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL)
 #endif
-
-/* PyObjectCall2Args.proto */
-static CYTHON_UNUSED PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2);
 
 /* PyObjectLookupSpecial.proto */
 #if CYTHON_USE_PYTYPE_LOOKUP && CYTHON_USE_TYPE_SLOTS
@@ -1418,7 +1400,6 @@ static const char __pyx_k_write[] = "write";
 static const char __pyx_k_base64[] = "base64";
 static const char __pyx_k_curdir[] = "curdir";
 static const char __pyx_k_decode[] = "decode";
-static const char __pyx_k_encode[] = "encode";
 static const char __pyx_k_exists[] = "exists";
 static const char __pyx_k_file_2[] = "file";
 static const char __pyx_k_import[] = "__import__";
@@ -1442,21 +1423,21 @@ static const char __pyx_k_obfuscator[] = "obfuscator";
 static const char __pyx_k_CURRENT_DIR[] = "CURRENT_DIR";
 static const char __pyx_k_ENCRYPT_KEY[] = "ENCRYPT_KEY";
 static const char __pyx_k_deobfuscate[] = "deobfuscate";
-static const char __pyx_k_src_obfuscator_py[] = "src/obfuscator.py";
+static const char __pyx_k_obfuscator_py[] = "obfuscator.py";
 static const char __pyx_k_urlsafe_b64decode[] = "urlsafe_b64decode";
 static const char __pyx_k_urlsafe_b64encode[] = "urlsafe_b64encode";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_project_folder_name[] = "project_folder_name";
 static const char __pyx_k_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM[] = "YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPMiVF3ZN1rH-c=";
 static const char __pyx_k_from_obfuscator_import_deobfusca[] = "from obfuscator import deobfuscate; exec(deobfuscate(\"\"\"";
-static PyObject *__pyx_kp_s_;
+static PyObject *__pyx_kp_u_;
 static PyObject *__pyx_n_s_CURRENT_DIR;
 static PyObject *__pyx_n_s_ENCRYPT_KEY;
 static PyObject *__pyx_n_s_Path;
-static PyObject *__pyx_kp_s_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM;
-static PyObject *__pyx_kp_s__2;
+static PyObject *__pyx_kp_u_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM;
+static PyObject *__pyx_kp_u__2;
 static PyObject *__pyx_kp_u__3;
-static PyObject *__pyx_kp_s__5;
+static PyObject *__pyx_kp_u__5;
 static PyObject *__pyx_n_s_abspath;
 static PyObject *__pyx_n_s_base64;
 static PyObject *__pyx_n_s_basename;
@@ -1471,14 +1452,14 @@ static PyObject *__pyx_n_s_decrypt;
 static PyObject *__pyx_n_s_deobfuscate;
 static PyObject *__pyx_n_s_dirname;
 static PyObject *__pyx_n_s_dist;
+static PyObject *__pyx_n_u_dist;
 static PyObject *__pyx_n_s_enc_c;
-static PyObject *__pyx_n_s_encode;
 static PyObject *__pyx_n_s_encryped;
 static PyObject *__pyx_n_s_encrypt;
 static PyObject *__pyx_n_s_endswith;
 static PyObject *__pyx_n_s_enter;
 static PyObject *__pyx_n_s_enumerate;
-static PyObject *__pyx_n_s_exec;
+static PyObject *__pyx_n_u_exec;
 static PyObject *__pyx_n_s_exists;
 static PyObject *__pyx_n_s_exit;
 static PyObject *__pyx_n_s_f;
@@ -1504,21 +1485,21 @@ static PyObject *__pyx_n_s_new_dir;
 static PyObject *__pyx_n_s_new_file;
 static PyObject *__pyx_n_s_obfuscate;
 static PyObject *__pyx_n_s_obfuscator;
+static PyObject *__pyx_kp_s_obfuscator_py;
 static PyObject *__pyx_n_s_open;
 static PyObject *__pyx_n_s_os;
 static PyObject *__pyx_n_s_path;
 static PyObject *__pyx_n_s_pathlib;
 static PyObject *__pyx_n_s_project_folder_name;
-static PyObject *__pyx_kp_s_py;
-static PyObject *__pyx_kp_s_pyc;
-static PyObject *__pyx_n_s_rb;
+static PyObject *__pyx_kp_u_py;
+static PyObject *__pyx_kp_u_pyc;
+static PyObject *__pyx_n_u_rb;
 static PyObject *__pyx_n_s_read;
 static PyObject *__pyx_n_s_rglob;
-static PyObject *__pyx_kp_s_src_obfuscator_py;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_urlsafe_b64decode;
 static PyObject *__pyx_n_s_urlsafe_b64encode;
-static PyObject *__pyx_n_s_wb;
+static PyObject *__pyx_n_u_wb;
 static PyObject *__pyx_n_s_write;
 static PyObject *__pyx_pf_10obfuscator_encrypt(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_key, PyObject *__pyx_v_msg); /* proto */
 static PyObject *__pyx_pf_10obfuscator_2decrypt(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_key, PyObject *__pyx_v_encryped); /* proto */
@@ -1631,7 +1612,6 @@ static PyObject *__pyx_pf_10obfuscator_encrypt(CYTHON_UNUSED PyObject *__pyx_sel
   long __pyx_t_8;
   int __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
-  PyObject *__pyx_t_11 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1785,39 +1765,24 @@ static PyObject *__pyx_pf_10obfuscator_encrypt(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_urlsafe_b64encode); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_10 = __Pyx_PyString_Join(__pyx_kp_s_, __pyx_v_encryped); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 14, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_encode); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 14, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_11);
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
-    __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_11);
-    if (likely(__pyx_t_10)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
-      __Pyx_INCREF(__pyx_t_10);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_11, function);
-    }
-  }
-  __pyx_t_5 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_11);
-  __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-  if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_5 = PyUnicode_Join(__pyx_kp_u_, __pyx_v_encryped); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = NULL;
+  __pyx_t_10 = PyUnicode_AsEncodedString(((PyObject*)__pyx_t_5), NULL, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
-    __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_7);
-    if (likely(__pyx_t_11)) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_7);
+    if (likely(__pyx_t_5)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-      __Pyx_INCREF(__pyx_t_11);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_7, function);
     }
   }
-  __pyx_t_2 = (__pyx_t_11) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_11, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_5);
-  __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_5, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_10);
+  __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -1858,7 +1823,6 @@ static PyObject *__pyx_pf_10obfuscator_encrypt(CYTHON_UNUSED PyObject *__pyx_sel
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_XDECREF(__pyx_t_11);
   __Pyx_AddTraceback("obfuscator.encrypt", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -2159,7 +2123,7 @@ static PyObject *__pyx_pf_10obfuscator_2decrypt(CYTHON_UNUSED PyObject *__pyx_se
  * def obfuscate(path, dist=None):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyString_Join(__pyx_kp_s_, __pyx_v_msg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_Join(__pyx_kp_u_, __pyx_v_msg); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2197,7 +2161,7 @@ static PyObject *__pyx_pf_10obfuscator_2decrypt(CYTHON_UNUSED PyObject *__pyx_se
  *     return ''.join(msg)
  * 
  * def obfuscate(path, dist=None):             # <<<<<<<<<<<<<<
- *     files = Path(path).rglob('*')
+ *     path = os.path.abspath(path)
  * 
  */
 
@@ -2304,16 +2268,50 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("obfuscate", 0);
+  __Pyx_INCREF(__pyx_v_path);
   __Pyx_INCREF(__pyx_v_dist);
 
   /* "obfuscator.py":27
  * 
  * def obfuscate(path, dist=None):
+ *     path = os.path.abspath(path)             # <<<<<<<<<<<<<<
+ * 
+ *     files = Path(path).rglob('*')
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_abspath); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_path) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_path);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF_SET(__pyx_v_path, __pyx_t_1);
+  __pyx_t_1 = 0;
+
+  /* "obfuscator.py":29
+ *     path = os.path.abspath(path)
+ * 
  *     files = Path(path).rglob('*')             # <<<<<<<<<<<<<<
  * 
  *     for file in files:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2327,10 +2325,10 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_path) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_path);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rglob); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_rglob); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2343,15 +2341,15 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF_SET(__pyx_t_3, function);
     }
   }
-  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_s__2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s__2);
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_u__2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u__2);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_files = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "obfuscator.py":29
+  /* "obfuscator.py":31
  *     files = Path(path).rglob('*')
  * 
  *     for file in files:             # <<<<<<<<<<<<<<
@@ -2362,26 +2360,26 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_1 = __pyx_v_files; __Pyx_INCREF(__pyx_t_1); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
   } else {
-    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_files); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_5 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_v_files); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_6 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 31, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_6)) {
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
         if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 29, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
@@ -2391,7 +2389,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 29, __pyx_L1_error)
+          else __PYX_ERR(0, 31, __pyx_L1_error)
         }
         break;
       }
@@ -2400,31 +2398,31 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_XDECREF_SET(__pyx_v_file, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "obfuscator.py":30
+    /* "obfuscator.py":32
  * 
  *     for file in files:
  *         file = str(file)             # <<<<<<<<<<<<<<
  *         if os.path.isdir(file) or file.endswith('.pyc'):
  *             continue
  */
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_v_file); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_v_file); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 32, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF_SET(__pyx_v_file, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "obfuscator.py":31
+    /* "obfuscator.py":33
  *     for file in files:
  *         file = str(file)
  *         if os.path.isdir(file) or file.endswith('.pyc'):             # <<<<<<<<<<<<<<
  *             continue
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_isdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_isdir); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -2439,17 +2437,17 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_v_file) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_file);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (!__pyx_t_8) {
     } else {
       __pyx_t_7 = __pyx_t_8;
       goto __pyx_L6_bool_binop_done;
     }
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_endswith); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_endswith); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_4 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2461,18 +2459,18 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_kp_s_pyc) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_pyc);
+    __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_kp_u_pyc) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_pyc);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_7 = __pyx_t_8;
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_7) {
 
-      /* "obfuscator.py":32
+      /* "obfuscator.py":34
  *         file = str(file)
  *         if os.path.isdir(file) or file.endswith('.pyc'):
  *             continue             # <<<<<<<<<<<<<<
@@ -2481,7 +2479,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "obfuscator.py":31
+      /* "obfuscator.py":33
  *     for file in files:
  *         file = str(file)
  *         if os.path.isdir(file) or file.endswith('.pyc'):             # <<<<<<<<<<<<<<
@@ -2490,7 +2488,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "obfuscator.py":34
+    /* "obfuscator.py":36
  *             continue
  * 
  *         with open(file, 'rb') as f:             # <<<<<<<<<<<<<<
@@ -2498,20 +2496,20 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  * 
  */
     /*with:*/ {
-      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_v_file);
       __Pyx_GIVEREF(__pyx_v_file);
       PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_file);
-      __Pyx_INCREF(__pyx_n_s_rb);
-      __Pyx_GIVEREF(__pyx_n_s_rb);
-      PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_n_s_rb);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __Pyx_INCREF(__pyx_n_u_rb);
+      __Pyx_GIVEREF(__pyx_n_u_rb);
+      PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_n_u_rb);
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 36, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 36, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 34, __pyx_L8_error)
+      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 36, __pyx_L8_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_10 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -2525,7 +2523,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       }
       __pyx_t_3 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 34, __pyx_L8_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 36, __pyx_L8_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = __pyx_t_3;
@@ -2543,14 +2541,14 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
             __Pyx_XDECREF_SET(__pyx_v_f, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "obfuscator.py":35
+            /* "obfuscator.py":37
  * 
  *         with open(file, 'rb') as f:
  *             content = f.read()             # <<<<<<<<<<<<<<
  * 
  *             if file.endswith('.py'):
  */
-            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L14_error)
+            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_2);
             __pyx_t_3 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2564,20 +2562,20 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
             }
             __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 35, __pyx_L14_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 37, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_XDECREF_SET(__pyx_v_content, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "obfuscator.py":37
+            /* "obfuscator.py":39
  *             content = f.read()
  * 
  *             if file.endswith('.py'):             # <<<<<<<<<<<<<<
  *                 content = encrypt(ENCRYPT_KEY, content.decode())
  *                 content = f'''from obfuscator import deobfuscate; exec(deobfuscate("""{content}"""))'''.encode()
  */
-            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_endswith); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 37, __pyx_L14_error)
+            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_endswith); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_2);
             __pyx_t_3 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -2589,27 +2587,27 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
                 __Pyx_DECREF_SET(__pyx_t_2, function);
               }
             }
-            __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_s_py) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_py);
+            __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_u_py) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_u_py);
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 37, __pyx_L14_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 39, __pyx_L14_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 37, __pyx_L14_error)
+            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 39, __pyx_L14_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             if (__pyx_t_7) {
 
-              /* "obfuscator.py":38
+              /* "obfuscator.py":40
  * 
  *             if file.endswith('.py'):
  *                 content = encrypt(ENCRYPT_KEY, content.decode())             # <<<<<<<<<<<<<<
  *                 content = f'''from obfuscator import deobfuscate; exec(deobfuscate("""{content}"""))'''.encode()
  * 
  */
-              __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_encrypt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 38, __pyx_L14_error)
+              __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_encrypt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 40, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ENCRYPT_KEY); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 38, __pyx_L14_error)
+              __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ENCRYPT_KEY); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 40, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_content, __pyx_n_s_decode); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 38, __pyx_L14_error)
+              __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_v_content, __pyx_n_s_decode); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 40, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_14);
               __pyx_t_15 = NULL;
               if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_14))) {
@@ -2623,7 +2621,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               }
               __pyx_t_10 = (__pyx_t_15) ? __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_t_15) : __Pyx_PyObject_CallNoArg(__pyx_t_14);
               __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-              if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 38, __pyx_L14_error)
+              if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 40, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_10);
               __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
               __pyx_t_14 = NULL;
@@ -2641,7 +2639,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               #if CYTHON_FAST_PYCALL
               if (PyFunction_Check(__pyx_t_2)) {
                 PyObject *__pyx_temp[3] = {__pyx_t_14, __pyx_t_3, __pyx_t_10};
-                __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L14_error)
+                __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L14_error)
                 __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
                 __Pyx_GOTREF(__pyx_t_4);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2651,7 +2649,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               #if CYTHON_FAST_PYCCALL
               if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
                 PyObject *__pyx_temp[3] = {__pyx_t_14, __pyx_t_3, __pyx_t_10};
-                __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L14_error)
+                __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L14_error)
                 __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
                 __Pyx_GOTREF(__pyx_t_4);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -2659,7 +2657,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               } else
               #endif
               {
-                __pyx_t_15 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 38, __pyx_L14_error)
+                __pyx_t_15 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 40, __pyx_L14_error)
                 __Pyx_GOTREF(__pyx_t_15);
                 if (__pyx_t_14) {
                   __Pyx_GIVEREF(__pyx_t_14); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_14); __pyx_t_14 = NULL;
@@ -2670,7 +2668,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
                 PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_16, __pyx_t_10);
                 __pyx_t_3 = 0;
                 __pyx_t_10 = 0;
-                __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L14_error)
+                __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L14_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
               }
@@ -2678,14 +2676,14 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               __Pyx_DECREF_SET(__pyx_v_content, __pyx_t_4);
               __pyx_t_4 = 0;
 
-              /* "obfuscator.py":39
+              /* "obfuscator.py":41
  *             if file.endswith('.py'):
  *                 content = encrypt(ENCRYPT_KEY, content.decode())
  *                 content = f'''from obfuscator import deobfuscate; exec(deobfuscate("""{content}"""))'''.encode()             # <<<<<<<<<<<<<<
  * 
  *         project_folder_name = os.path.basename(path)
  */
-              __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 39, __pyx_L14_error)
+              __pyx_t_4 = PyTuple_New(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_4);
               __pyx_t_17 = 0;
               __pyx_t_18 = 127;
@@ -2693,7 +2691,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               __pyx_t_17 += 56;
               __Pyx_GIVEREF(__pyx_kp_u_from_obfuscator_import_deobfusca);
               PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_kp_u_from_obfuscator_import_deobfusca);
-              __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_content, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L14_error)
+              __pyx_t_2 = __Pyx_PyObject_FormatSimple(__pyx_v_content, __pyx_empty_unicode); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_2);
               __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_2) : __pyx_t_18;
               __pyx_t_17 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_2);
@@ -2704,16 +2702,16 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               __pyx_t_17 += 5;
               __Pyx_GIVEREF(__pyx_kp_u__3);
               PyTuple_SET_ITEM(__pyx_t_4, 2, __pyx_kp_u__3);
-              __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_4, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 39, __pyx_L14_error)
+              __pyx_t_2 = __Pyx_PyUnicode_Join(__pyx_t_4, 3, __pyx_t_17, __pyx_t_18); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_2);
               __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-              __pyx_t_4 = PyUnicode_AsEncodedString(((PyObject*)__pyx_t_2), NULL, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 39, __pyx_L14_error)
+              __pyx_t_4 = PyUnicode_AsEncodedString(((PyObject*)__pyx_t_2), NULL, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L14_error)
               __Pyx_GOTREF(__pyx_t_4);
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_DECREF_SET(__pyx_v_content, __pyx_t_4);
               __pyx_t_4 = 0;
 
-              /* "obfuscator.py":37
+              /* "obfuscator.py":39
  *             content = f.read()
  * 
  *             if file.endswith('.py'):             # <<<<<<<<<<<<<<
@@ -2722,7 +2720,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
             }
 
-            /* "obfuscator.py":34
+            /* "obfuscator.py":36
  *             continue
  * 
  *         with open(file, 'rb') as f:             # <<<<<<<<<<<<<<
@@ -2743,20 +2741,20 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           /*except:*/ {
             __Pyx_AddTraceback("obfuscator.obfuscate", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_15) < 0) __PYX_ERR(0, 34, __pyx_L16_except_error)
+            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_15) < 0) __PYX_ERR(0, 36, __pyx_L16_except_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_GOTREF(__pyx_t_15);
-            __pyx_t_10 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 34, __pyx_L16_except_error)
+            __pyx_t_10 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 36, __pyx_L16_except_error)
             __Pyx_GOTREF(__pyx_t_10);
             __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_10, NULL);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-            if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 34, __pyx_L16_except_error)
+            if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 36, __pyx_L16_except_error)
             __Pyx_GOTREF(__pyx_t_19);
             __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_19);
             __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-            if (__pyx_t_7 < 0) __PYX_ERR(0, 34, __pyx_L16_except_error)
+            if (__pyx_t_7 < 0) __PYX_ERR(0, 36, __pyx_L16_except_error)
             __pyx_t_8 = ((!(__pyx_t_7 != 0)) != 0);
             if (__pyx_t_8) {
               __Pyx_GIVEREF(__pyx_t_4);
@@ -2764,7 +2762,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               __Pyx_XGIVEREF(__pyx_t_15);
               __Pyx_ErrRestoreWithState(__pyx_t_4, __pyx_t_2, __pyx_t_15);
               __pyx_t_4 = 0; __pyx_t_2 = 0; __pyx_t_15 = 0; 
-              __PYX_ERR(0, 34, __pyx_L16_except_error)
+              __PYX_ERR(0, 36, __pyx_L16_except_error)
             }
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2790,7 +2788,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
           if (__pyx_t_9) {
             __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__4, NULL);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 34, __pyx_L1_error)
+            if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 36, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
           }
@@ -2805,19 +2803,19 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __pyx_L26:;
     }
 
-    /* "obfuscator.py":41
+    /* "obfuscator.py":43
  *                 content = f'''from obfuscator import deobfuscate; exec(deobfuscate("""{content}"""))'''.encode()
  * 
  *         project_folder_name = os.path.basename(path)             # <<<<<<<<<<<<<<
  * 
  *         if not dist:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -2832,39 +2830,39 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     }
     __pyx_t_15 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_v_path) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_path);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 41, __pyx_L1_error)
+    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 43, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_project_folder_name, __pyx_t_15);
     __pyx_t_15 = 0;
 
-    /* "obfuscator.py":43
+    /* "obfuscator.py":45
  *         project_folder_name = os.path.basename(path)
  * 
  *         if not dist:             # <<<<<<<<<<<<<<
  *             dist = os.path.join(CURRENT_DIR, 'dist')
  * 
  */
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_dist); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 43, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_v_dist); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 45, __pyx_L1_error)
     __pyx_t_7 = ((!__pyx_t_8) != 0);
     if (__pyx_t_7) {
 
-      /* "obfuscator.py":44
+      /* "obfuscator.py":46
  * 
  *         if not dist:
  *             dist = os.path.join(CURRENT_DIR, 'dist')             # <<<<<<<<<<<<<<
  * 
  *         ind = file.find('/' + project_folder_name + '/')
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_join); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_join); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_CURRENT_DIR); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 44, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_CURRENT_DIR); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_10 = NULL;
       __pyx_t_16 = 0;
@@ -2880,8 +2878,8 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       }
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_n_s_dist};
-        __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 44, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_n_u_dist};
+        __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2889,26 +2887,26 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       #endif
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
-        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_n_s_dist};
-        __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 44, __pyx_L1_error)
+        PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_4, __pyx_n_u_dist};
+        __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       } else
       #endif
       {
-        __pyx_t_3 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         if (__pyx_t_10) {
           __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_10); __pyx_t_10 = NULL;
         }
         __Pyx_GIVEREF(__pyx_t_4);
         PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_16, __pyx_t_4);
-        __Pyx_INCREF(__pyx_n_s_dist);
-        __Pyx_GIVEREF(__pyx_n_s_dist);
-        PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_16, __pyx_n_s_dist);
+        __Pyx_INCREF(__pyx_n_u_dist);
+        __Pyx_GIVEREF(__pyx_n_u_dist);
+        PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_16, __pyx_n_u_dist);
         __pyx_t_4 = 0;
-        __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 44, __pyx_L1_error)
+        __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 46, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
@@ -2916,7 +2914,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF_SET(__pyx_v_dist, __pyx_t_15);
       __pyx_t_15 = 0;
 
-      /* "obfuscator.py":43
+      /* "obfuscator.py":45
  *         project_folder_name = os.path.basename(path)
  * 
  *         if not dist:             # <<<<<<<<<<<<<<
@@ -2925,18 +2923,18 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "obfuscator.py":46
+    /* "obfuscator.py":48
  *             dist = os.path.join(CURRENT_DIR, 'dist')
  * 
  *         ind = file.find('/' + project_folder_name + '/')             # <<<<<<<<<<<<<<
  *         if ind == -1:
  *             continue
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_find); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_file, __pyx_n_s_find); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = PyNumber_Add(__pyx_kp_s__5, __pyx_v_project_folder_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 46, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_kp_u__5, __pyx_v_project_folder_name); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_kp_s__5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 46, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_kp_u__5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -2952,26 +2950,26 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_15 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 46, __pyx_L1_error)
+    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 48, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_ind, __pyx_t_15);
     __pyx_t_15 = 0;
 
-    /* "obfuscator.py":47
+    /* "obfuscator.py":49
  * 
  *         ind = file.find('/' + project_folder_name + '/')
  *         if ind == -1:             # <<<<<<<<<<<<<<
  *             continue
  * 
  */
-    __pyx_t_15 = __Pyx_PyInt_EqObjC(__pyx_v_ind, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 47, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyInt_EqObjC(__pyx_v_ind, __pyx_int_neg_1, -1L, 0); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 49, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_15); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 47, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_15); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 49, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     if (__pyx_t_7) {
 
-      /* "obfuscator.py":48
+      /* "obfuscator.py":50
  *         ind = file.find('/' + project_folder_name + '/')
  *         if ind == -1:
  *             continue             # <<<<<<<<<<<<<<
@@ -2980,7 +2978,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "obfuscator.py":47
+      /* "obfuscator.py":49
  * 
  *         ind = file.find('/' + project_folder_name + '/')
  *         if ind == -1:             # <<<<<<<<<<<<<<
@@ -2989,16 +2987,16 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "obfuscator.py":50
+    /* "obfuscator.py":52
  *             continue
  * 
  *         new_file = file[ind:].lstrip('/')             # <<<<<<<<<<<<<<
  * 
  *         new_dir = os.path.join(dist, os.path.dirname(new_file))
  */
-    __pyx_t_2 = __Pyx_PyObject_GetSlice(__pyx_v_file, 0, 0, &__pyx_v_ind, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetSlice(__pyx_v_file, 0, 0, &__pyx_v_ind, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_lstrip); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_lstrip); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -3011,35 +3009,35 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF_SET(__pyx_t_4, function);
       }
     }
-    __pyx_t_15 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_kp_s__5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_s__5);
+    __pyx_t_15 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_kp_u__5) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u__5);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 50, __pyx_L1_error)
+    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 52, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF_SET(__pyx_v_new_file, __pyx_t_15);
     __pyx_t_15 = 0;
 
-    /* "obfuscator.py":52
+    /* "obfuscator.py":54
  *         new_file = file[ind:].lstrip('/')
  * 
  *         new_dir = os.path.join(dist, os.path.dirname(new_file))             # <<<<<<<<<<<<<<
  *         new_file = os.path.join(new_dir, os.path.basename(new_file))
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_join); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_join); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_dirname); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 52, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_dirname); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __pyx_t_10 = NULL;
@@ -3054,7 +3052,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     }
     __pyx_t_2 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_10, __pyx_v_new_file) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_new_file);
     __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -3072,7 +3070,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_dist, __pyx_t_2};
-      __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 54, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3081,14 +3079,14 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_dist, __pyx_t_2};
-      __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 54, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_10 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 54, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       if (__pyx_t_3) {
         __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -3099,7 +3097,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_16, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_10, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 52, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_10, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 54, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
@@ -3107,27 +3105,27 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_XDECREF_SET(__pyx_v_new_dir, __pyx_t_15);
     __pyx_t_15 = 0;
 
-    /* "obfuscator.py":53
+    /* "obfuscator.py":55
  * 
  *         new_dir = os.path.join(dist, os.path.dirname(new_file))
  *         new_file = os.path.join(new_dir, os.path.basename(new_file))             # <<<<<<<<<<<<<<
  * 
  *         if not os.path.exists(new_dir):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_join); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_join); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 53, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -3142,7 +3140,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     }
     __pyx_t_10 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_new_file) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_new_file);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 53, __pyx_L1_error)
+    if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 55, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -3160,7 +3158,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_new_dir, __pyx_t_10};
-      __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 55, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -3169,14 +3167,14 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_new_dir, __pyx_t_10};
-      __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_16, 2+__pyx_t_16); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 55, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     } else
     #endif
     {
-      __pyx_t_3 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(2+__pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 55, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (__pyx_t_2) {
         __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -3187,7 +3185,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_GIVEREF(__pyx_t_10);
       PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_16, __pyx_t_10);
       __pyx_t_10 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 53, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 55, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -3195,19 +3193,19 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_DECREF_SET(__pyx_v_new_file, __pyx_t_15);
     __pyx_t_15 = 0;
 
-    /* "obfuscator.py":55
+    /* "obfuscator.py":57
  *         new_file = os.path.join(new_dir, os.path.basename(new_file))
  * 
  *         if not os.path.exists(new_dir):             # <<<<<<<<<<<<<<
  *             os.makedirs(new_dir)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 55, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_exists); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 55, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_exists); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -3222,24 +3220,24 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
     }
     __pyx_t_15 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_v_new_dir) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_new_dir);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 55, __pyx_L1_error)
+    if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 57, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_15); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 55, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_15); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 57, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __pyx_t_8 = ((!__pyx_t_7) != 0);
     if (__pyx_t_8) {
 
-      /* "obfuscator.py":56
+      /* "obfuscator.py":58
  * 
  *         if not os.path.exists(new_dir):
  *             os.makedirs(new_dir)             # <<<<<<<<<<<<<<
  * 
  *         with open(new_file, 'wb') as f:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_makedirs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_makedirs); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -3254,12 +3252,12 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       }
       __pyx_t_15 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_new_dir) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_new_dir);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 56, __pyx_L1_error)
+      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 58, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
 
-      /* "obfuscator.py":55
+      /* "obfuscator.py":57
  *         new_file = os.path.join(new_dir, os.path.basename(new_file))
  * 
  *         if not os.path.exists(new_dir):             # <<<<<<<<<<<<<<
@@ -3268,7 +3266,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "obfuscator.py":58
+    /* "obfuscator.py":60
  *             os.makedirs(new_dir)
  * 
  *         with open(new_file, 'wb') as f:             # <<<<<<<<<<<<<<
@@ -3276,20 +3274,20 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  * 
  */
     /*with:*/ {
-      __pyx_t_15 = PyTuple_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __pyx_t_15 = PyTuple_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 60, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_INCREF(__pyx_v_new_file);
       __Pyx_GIVEREF(__pyx_v_new_file);
       PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_v_new_file);
-      __Pyx_INCREF(__pyx_n_s_wb);
-      __Pyx_GIVEREF(__pyx_n_s_wb);
-      PyTuple_SET_ITEM(__pyx_t_15, 1, __pyx_n_s_wb);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __Pyx_INCREF(__pyx_n_u_wb);
+      __Pyx_GIVEREF(__pyx_n_u_wb);
+      PyTuple_SET_ITEM(__pyx_t_15, 1, __pyx_n_u_wb);
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 58, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 60, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 58, __pyx_L30_error)
+      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 60, __pyx_L30_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_10 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -3303,7 +3301,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       }
       __pyx_t_15 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 58, __pyx_L30_error)
+      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 60, __pyx_L30_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = __pyx_t_15;
@@ -3321,16 +3319,16 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
             __Pyx_XDECREF_SET(__pyx_v_f, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "obfuscator.py":59
+            /* "obfuscator.py":61
  * 
  *         with open(new_file, 'wb') as f:
  *             f.write(content)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-            __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L36_error)
+            __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_f, __pyx_n_s_write); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L36_error)
             __Pyx_GOTREF(__pyx_t_3);
-            if (unlikely(!__pyx_v_content)) { __Pyx_RaiseUnboundLocalError("content"); __PYX_ERR(0, 59, __pyx_L36_error) }
+            if (unlikely(!__pyx_v_content)) { __Pyx_RaiseUnboundLocalError("content"); __PYX_ERR(0, 61, __pyx_L36_error) }
             __pyx_t_15 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
               __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_3);
@@ -3343,12 +3341,12 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
             }
             __pyx_t_4 = (__pyx_t_15) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_15, __pyx_v_content) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_content);
             __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L36_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 61, __pyx_L36_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "obfuscator.py":58
+            /* "obfuscator.py":60
  *             os.makedirs(new_dir)
  * 
  *         with open(new_file, 'wb') as f:             # <<<<<<<<<<<<<<
@@ -3369,20 +3367,20 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
           __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
           /*except:*/ {
             __Pyx_AddTraceback("obfuscator.obfuscate", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_15) < 0) __PYX_ERR(0, 58, __pyx_L38_except_error)
+            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_15) < 0) __PYX_ERR(0, 60, __pyx_L38_except_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_GOTREF(__pyx_t_15);
-            __pyx_t_10 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_3, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 58, __pyx_L38_except_error)
+            __pyx_t_10 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_3, __pyx_t_15); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 60, __pyx_L38_except_error)
             __Pyx_GOTREF(__pyx_t_10);
             __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_10, NULL);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-            if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 58, __pyx_L38_except_error)
+            if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 60, __pyx_L38_except_error)
             __Pyx_GOTREF(__pyx_t_19);
             __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_19);
             __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
-            if (__pyx_t_8 < 0) __PYX_ERR(0, 58, __pyx_L38_except_error)
+            if (__pyx_t_8 < 0) __PYX_ERR(0, 60, __pyx_L38_except_error)
             __pyx_t_7 = ((!(__pyx_t_8 != 0)) != 0);
             if (__pyx_t_7) {
               __Pyx_GIVEREF(__pyx_t_4);
@@ -3390,7 +3388,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
               __Pyx_XGIVEREF(__pyx_t_15);
               __Pyx_ErrRestoreWithState(__pyx_t_4, __pyx_t_3, __pyx_t_15);
               __pyx_t_4 = 0; __pyx_t_3 = 0; __pyx_t_15 = 0; 
-              __PYX_ERR(0, 58, __pyx_L38_except_error)
+              __PYX_ERR(0, 60, __pyx_L38_except_error)
             }
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3416,7 +3414,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
           if (__pyx_t_9) {
             __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__4, NULL);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-            if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 58, __pyx_L1_error)
+            if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 60, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_11);
             __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           }
@@ -3431,7 +3429,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
       __pyx_L47:;
     }
 
-    /* "obfuscator.py":29
+    /* "obfuscator.py":31
  *     files = Path(path).rglob('*')
  * 
  *     for file in files:             # <<<<<<<<<<<<<<
@@ -3446,7 +3444,7 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
  *     return ''.join(msg)
  * 
  * def obfuscate(path, dist=None):             # <<<<<<<<<<<<<<
- *     files = Path(path).rglob('*')
+ *     path = os.path.abspath(path)
  * 
  */
 
@@ -3472,13 +3470,14 @@ static PyObject *__pyx_pf_10obfuscator_4obfuscate(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_v_ind);
   __Pyx_XDECREF(__pyx_v_new_file);
   __Pyx_XDECREF(__pyx_v_new_dir);
+  __Pyx_XDECREF(__pyx_v_path);
   __Pyx_XDECREF(__pyx_v_dist);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "obfuscator.py":62
+/* "obfuscator.py":64
  * 
  * 
  * def deobfuscate(content):             # <<<<<<<<<<<<<<
@@ -3515,16 +3514,16 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
   __Pyx_RefNannySetupContext("deobfuscate", 0);
   __Pyx_INCREF(__pyx_v_content);
 
-  /* "obfuscator.py":63
+  /* "obfuscator.py":65
  * 
  * def deobfuscate(content):
  *     content = decrypt(ENCRYPT_KEY, content)             # <<<<<<<<<<<<<<
  *     return compile(content, os.path.basename(__file__), "exec")
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_decrypt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_decrypt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ENCRYPT_KEY); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_ENCRYPT_KEY); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 65, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -3541,7 +3540,7 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_content};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -3550,14 +3549,14 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_t_3, __pyx_v_content};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -3568,7 +3567,7 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
     __Pyx_GIVEREF(__pyx_v_content);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_content);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 63, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_6, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 65, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
@@ -3576,7 +3575,7 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
   __Pyx_DECREF_SET(__pyx_v_content, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "obfuscator.py":64
+  /* "obfuscator.py":66
  * def deobfuscate(content):
  *     content = decrypt(ENCRYPT_KEY, content)
  *     return compile(content, os.path.basename(__file__), "exec")             # <<<<<<<<<<<<<<
@@ -3584,15 +3583,15 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
  *     # ['co_argcount', 'co_cellvars', 'co_code', 'co_consts', 'co_filename', 'co_firstlineno', 'co_flags', 'co_freevars', 'co_kwonlyargcount', 'co_lnotab', 'co_name', 'co_names', 'co_nlocals', 'co_posonlyargcount', 'co_stacksize', 'co_varnames', 'replace']
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_basename); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_file); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_file); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -3607,28 +3606,28 @@ static PyObject *__pyx_pf_10obfuscator_6deobfuscate(CYTHON_UNUSED PyObject *__py
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_6);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_content);
   __Pyx_GIVEREF(__pyx_v_content);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_content);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s_exec);
-  __Pyx_GIVEREF(__pyx_n_s_exec);
-  PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_n_s_exec);
+  __Pyx_INCREF(__pyx_n_u_exec);
+  __Pyx_GIVEREF(__pyx_n_u_exec);
+  PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_n_u_exec);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_compile, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_compile, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "obfuscator.py":62
+  /* "obfuscator.py":64
  * 
  * 
  * def deobfuscate(content):             # <<<<<<<<<<<<<<
@@ -3698,14 +3697,14 @@ static struct PyModuleDef __pyx_moduledef = {
 #endif
 
 static __Pyx_StringTabEntry __pyx_string_tab[] = {
-  {&__pyx_kp_s_, __pyx_k_, sizeof(__pyx_k_), 0, 0, 1, 0},
+  {&__pyx_kp_u_, __pyx_k_, sizeof(__pyx_k_), 0, 1, 0, 0},
   {&__pyx_n_s_CURRENT_DIR, __pyx_k_CURRENT_DIR, sizeof(__pyx_k_CURRENT_DIR), 0, 0, 1, 1},
   {&__pyx_n_s_ENCRYPT_KEY, __pyx_k_ENCRYPT_KEY, sizeof(__pyx_k_ENCRYPT_KEY), 0, 0, 1, 1},
   {&__pyx_n_s_Path, __pyx_k_Path, sizeof(__pyx_k_Path), 0, 0, 1, 1},
-  {&__pyx_kp_s_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM, __pyx_k_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM, sizeof(__pyx_k_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM), 0, 0, 1, 0},
-  {&__pyx_kp_s__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 0, 1, 0},
+  {&__pyx_kp_u_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM, __pyx_k_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM, sizeof(__pyx_k_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM), 0, 1, 0, 0},
+  {&__pyx_kp_u__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 1, 0, 0},
   {&__pyx_kp_u__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 1, 0, 0},
-  {&__pyx_kp_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 0},
+  {&__pyx_kp_u__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 1, 0, 0},
   {&__pyx_n_s_abspath, __pyx_k_abspath, sizeof(__pyx_k_abspath), 0, 0, 1, 1},
   {&__pyx_n_s_base64, __pyx_k_base64, sizeof(__pyx_k_base64), 0, 0, 1, 1},
   {&__pyx_n_s_basename, __pyx_k_basename, sizeof(__pyx_k_basename), 0, 0, 1, 1},
@@ -3720,14 +3719,14 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_deobfuscate, __pyx_k_deobfuscate, sizeof(__pyx_k_deobfuscate), 0, 0, 1, 1},
   {&__pyx_n_s_dirname, __pyx_k_dirname, sizeof(__pyx_k_dirname), 0, 0, 1, 1},
   {&__pyx_n_s_dist, __pyx_k_dist, sizeof(__pyx_k_dist), 0, 0, 1, 1},
+  {&__pyx_n_u_dist, __pyx_k_dist, sizeof(__pyx_k_dist), 0, 1, 0, 1},
   {&__pyx_n_s_enc_c, __pyx_k_enc_c, sizeof(__pyx_k_enc_c), 0, 0, 1, 1},
-  {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
   {&__pyx_n_s_encryped, __pyx_k_encryped, sizeof(__pyx_k_encryped), 0, 0, 1, 1},
   {&__pyx_n_s_encrypt, __pyx_k_encrypt, sizeof(__pyx_k_encrypt), 0, 0, 1, 1},
   {&__pyx_n_s_endswith, __pyx_k_endswith, sizeof(__pyx_k_endswith), 0, 0, 1, 1},
   {&__pyx_n_s_enter, __pyx_k_enter, sizeof(__pyx_k_enter), 0, 0, 1, 1},
   {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
-  {&__pyx_n_s_exec, __pyx_k_exec, sizeof(__pyx_k_exec), 0, 0, 1, 1},
+  {&__pyx_n_u_exec, __pyx_k_exec, sizeof(__pyx_k_exec), 0, 1, 0, 1},
   {&__pyx_n_s_exists, __pyx_k_exists, sizeof(__pyx_k_exists), 0, 0, 1, 1},
   {&__pyx_n_s_exit, __pyx_k_exit, sizeof(__pyx_k_exit), 0, 0, 1, 1},
   {&__pyx_n_s_f, __pyx_k_f, sizeof(__pyx_k_f), 0, 0, 1, 1},
@@ -3753,29 +3752,29 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_new_file, __pyx_k_new_file, sizeof(__pyx_k_new_file), 0, 0, 1, 1},
   {&__pyx_n_s_obfuscate, __pyx_k_obfuscate, sizeof(__pyx_k_obfuscate), 0, 0, 1, 1},
   {&__pyx_n_s_obfuscator, __pyx_k_obfuscator, sizeof(__pyx_k_obfuscator), 0, 0, 1, 1},
+  {&__pyx_kp_s_obfuscator_py, __pyx_k_obfuscator_py, sizeof(__pyx_k_obfuscator_py), 0, 0, 1, 0},
   {&__pyx_n_s_open, __pyx_k_open, sizeof(__pyx_k_open), 0, 0, 1, 1},
   {&__pyx_n_s_os, __pyx_k_os, sizeof(__pyx_k_os), 0, 0, 1, 1},
   {&__pyx_n_s_path, __pyx_k_path, sizeof(__pyx_k_path), 0, 0, 1, 1},
   {&__pyx_n_s_pathlib, __pyx_k_pathlib, sizeof(__pyx_k_pathlib), 0, 0, 1, 1},
   {&__pyx_n_s_project_folder_name, __pyx_k_project_folder_name, sizeof(__pyx_k_project_folder_name), 0, 0, 1, 1},
-  {&__pyx_kp_s_py, __pyx_k_py, sizeof(__pyx_k_py), 0, 0, 1, 0},
-  {&__pyx_kp_s_pyc, __pyx_k_pyc, sizeof(__pyx_k_pyc), 0, 0, 1, 0},
-  {&__pyx_n_s_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 0, 1, 1},
+  {&__pyx_kp_u_py, __pyx_k_py, sizeof(__pyx_k_py), 0, 1, 0, 0},
+  {&__pyx_kp_u_pyc, __pyx_k_pyc, sizeof(__pyx_k_pyc), 0, 1, 0, 0},
+  {&__pyx_n_u_rb, __pyx_k_rb, sizeof(__pyx_k_rb), 0, 1, 0, 1},
   {&__pyx_n_s_read, __pyx_k_read, sizeof(__pyx_k_read), 0, 0, 1, 1},
   {&__pyx_n_s_rglob, __pyx_k_rglob, sizeof(__pyx_k_rglob), 0, 0, 1, 1},
-  {&__pyx_kp_s_src_obfuscator_py, __pyx_k_src_obfuscator_py, sizeof(__pyx_k_src_obfuscator_py), 0, 0, 1, 0},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_urlsafe_b64decode, __pyx_k_urlsafe_b64decode, sizeof(__pyx_k_urlsafe_b64decode), 0, 0, 1, 1},
   {&__pyx_n_s_urlsafe_b64encode, __pyx_k_urlsafe_b64encode, sizeof(__pyx_k_urlsafe_b64encode), 0, 0, 1, 1},
-  {&__pyx_n_s_wb, __pyx_k_wb, sizeof(__pyx_k_wb), 0, 0, 1, 1},
+  {&__pyx_n_u_wb, __pyx_k_wb, sizeof(__pyx_k_wb), 0, 1, 0, 1},
   {&__pyx_n_s_write, __pyx_k_write, sizeof(__pyx_k_write), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 10, __pyx_L1_error)
   __pyx_builtin_chr = __Pyx_GetBuiltinName(__pyx_n_s_chr); if (!__pyx_builtin_chr) __PYX_ERR(0, 13, __pyx_L1_error)
-  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 34, __pyx_L1_error)
-  __pyx_builtin_compile = __Pyx_GetBuiltinName(__pyx_n_s_compile); if (!__pyx_builtin_compile) __PYX_ERR(0, 64, __pyx_L1_error)
+  __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 36, __pyx_L1_error)
+  __pyx_builtin_compile = __Pyx_GetBuiltinName(__pyx_n_s_compile); if (!__pyx_builtin_compile) __PYX_ERR(0, 66, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -3785,14 +3784,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "obfuscator.py":34
+  /* "obfuscator.py":36
  *             continue
  * 
  *         with open(file, 'rb') as f:             # <<<<<<<<<<<<<<
  *             content = f.read()
  * 
  */
-  __pyx_tuple__4 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 36, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
@@ -3806,7 +3805,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__6 = PyTuple_Pack(7, __pyx_n_s_key, __pyx_n_s_msg, __pyx_n_s_encryped, __pyx_n_s_i, __pyx_n_s_c, __pyx_n_s_key_c, __pyx_n_s_msg_c); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_obfuscator_py, __pyx_n_s_encrypt, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_obfuscator_py, __pyx_n_s_encrypt, 8, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 8, __pyx_L1_error)
 
   /* "obfuscator.py":16
  *     return base64.urlsafe_b64encode(''.join(encryped).encode()).decode()
@@ -3818,34 +3817,34 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__8 = PyTuple_Pack(7, __pyx_n_s_key, __pyx_n_s_encryped, __pyx_n_s_msg, __pyx_n_s_i, __pyx_n_s_c, __pyx_n_s_key_c, __pyx_n_s_enc_c); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_obfuscator_py, __pyx_n_s_decrypt, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_obfuscator_py, __pyx_n_s_decrypt, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 16, __pyx_L1_error)
 
   /* "obfuscator.py":26
  *     return ''.join(msg)
  * 
  * def obfuscate(path, dist=None):             # <<<<<<<<<<<<<<
- *     files = Path(path).rglob('*')
+ *     path = os.path.abspath(path)
  * 
  */
   __pyx_tuple__10 = PyTuple_Pack(10, __pyx_n_s_path, __pyx_n_s_dist, __pyx_n_s_files, __pyx_n_s_file_2, __pyx_n_s_f, __pyx_n_s_content, __pyx_n_s_project_folder_name, __pyx_n_s_ind, __pyx_n_s_new_file, __pyx_n_s_new_dir); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_obfuscator_py, __pyx_n_s_obfuscate, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 26, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(2, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_obfuscator_py, __pyx_n_s_obfuscate, 26, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 26, __pyx_L1_error)
   __pyx_tuple__12 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "obfuscator.py":62
+  /* "obfuscator.py":64
  * 
  * 
  * def deobfuscate(content):             # <<<<<<<<<<<<<<
  *     content = decrypt(ENCRYPT_KEY, content)
  *     return compile(content, os.path.basename(__file__), "exec")
  */
-  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_content); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_n_s_content); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_src_obfuscator_py, __pyx_n_s_deobfuscate, 62, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_obfuscator_py, __pyx_n_s_deobfuscate, 64, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -4142,7 +4141,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_Path);
   __Pyx_GIVEREF(__pyx_n_s_Path);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_Path);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_pathlib, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_ImportFrom(__pyx_t_2, __pyx_n_s_Path); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -4157,11 +4156,11 @@ if (!__Pyx_RefNanny) {
  * 
  * ENCRYPT_KEY = 'YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPMiVF3ZN1rH-c='
  */
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_os, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_os, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_os, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_base64, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_base64, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_base64, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4173,7 +4172,7 @@ if (!__Pyx_RefNanny) {
  * 
  * CURRENT_DIR = os.path.abspath(os.curdir)
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENCRYPT_KEY, __pyx_kp_s_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ENCRYPT_KEY, __pyx_kp_u_YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPM) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
 
   /* "obfuscator.py":6
  * ENCRYPT_KEY = 'YMSaC_Tk0ea44rMzRffnLV2Fpsv6PzPMiVF3ZN1rH-c='
@@ -4230,7 +4229,7 @@ if (!__Pyx_RefNanny) {
  *     return ''.join(msg)
  * 
  * def obfuscate(path, dist=None):             # <<<<<<<<<<<<<<
- *     files = Path(path).rglob('*')
+ *     path = os.path.abspath(path)
  * 
  */
   __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_10obfuscator_5obfuscate, 0, __pyx_n_s_obfuscate, NULL, __pyx_n_s_obfuscator, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 26, __pyx_L1_error)
@@ -4239,16 +4238,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_obfuscate, __pyx_t_1) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "obfuscator.py":62
+  /* "obfuscator.py":64
  * 
  * 
  * def deobfuscate(content):             # <<<<<<<<<<<<<<
  *     content = decrypt(ENCRYPT_KEY, content)
  *     return compile(content, os.path.basename(__file__), "exec")
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_10obfuscator_7deobfuscate, 0, __pyx_n_s_deobfuscate, NULL, __pyx_n_s_obfuscator, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_10obfuscator_7deobfuscate, 0, __pyx_n_s_deobfuscate, NULL, __pyx_n_s_obfuscator, __pyx_d, ((PyObject *)__pyx_codeobj__14)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_deobfuscate, __pyx_t_1) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_deobfuscate, __pyx_t_1) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "obfuscator.py":1
@@ -5183,35 +5182,6 @@ static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name)
     return __Pyx_GetBuiltinName(name);
 }
 
-/* StringJoin */
-#if !CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyBytes_Join(PyObject* sep, PyObject* values) {
-    return PyObject_CallMethodObjArgs(sep, __pyx_n_s_join, values, NULL);
-}
-#endif
-
-/* PyObjectCallNoArg */
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
-#if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(func)) {
-        return __Pyx_PyFunction_FastCall(func, NULL, 0);
-    }
-#endif
-#ifdef __Pyx_CyFunction_USED
-    if (likely(PyCFunction_Check(func) || __Pyx_CyFunction_Check(func)))
-#else
-    if (likely(PyCFunction_Check(func)))
-#endif
-    {
-        if (likely(PyCFunction_GET_FLAGS(func) & METH_NOARGS)) {
-            return __Pyx_PyObject_CallMethO(func, NULL);
-        }
-    }
-    return __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL);
-}
-#endif
-
 /* PyObjectCall2Args */
 static CYTHON_UNUSED PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2) {
     PyObject *args, *result = NULL;
@@ -5240,6 +5210,28 @@ static CYTHON_UNUSED PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyOb
 done:
     return result;
 }
+
+/* PyObjectCallNoArg */
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_CallNoArg(PyObject *func) {
+#if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(func)) {
+        return __Pyx_PyFunction_FastCall(func, NULL, 0);
+    }
+#endif
+#ifdef __Pyx_CyFunction_USED
+    if (likely(PyCFunction_Check(func) || __Pyx_CyFunction_Check(func)))
+#else
+    if (likely(PyCFunction_Check(func)))
+#endif
+    {
+        if (likely(PyCFunction_GET_FLAGS(func) & METH_NOARGS)) {
+            return __Pyx_PyObject_CallMethO(func, NULL);
+        }
+    }
+    return __Pyx_PyObject_Call(func, __pyx_empty_tuple, NULL);
+}
+#endif
 
 /* JoinPyUnicode */
 static PyObject* __Pyx_PyUnicode_Join(PyObject* value_tuple, Py_ssize_t value_count, Py_ssize_t result_ulength,
