@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+PyProjObfuscator.egg-info/PKG-INFO
+PyProjObfuscator.egg-info/SOURCES.txt
+PyProjObfuscator.egg-info/dependency_links.txt
+PyProjObfuscator.egg-info/entry_points.txt
+PyProjObfuscator.egg-info/top_level.txt
+obfuscate_command/__init__.py
+obfuscate_command/obfuscate.py
+src/obfuscator.c

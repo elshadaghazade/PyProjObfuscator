@@ -1,0 +1,3 @@
+[console_scripts]
+obfuscate = obfuscate_command.obfuscate:main
+
