@@ -3,7 +3,7 @@ import argparse, obfuscator
 argp = argparse.ArgumentParser(description='Python Project Obfuscator is for obfuscate any type of Python project.')
 argp.add_argument('-p', '--path', type=str, help='Path of the project folder')
 argp.add_argument('-d', '--dist', default='dist', type=str, help='Destination folder where obfuscated project files will be copied. By default it is ./dist')
-argp.add_argument('-v', '--version', nargs='?', const='1.0.0-rc-1', help='Version')
+argp.add_argument('-v', '--version', nargs='?', const='1.1.0', help='Version')
 args = argp.parse_args()
 
 def main():
